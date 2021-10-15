@@ -1,5 +1,18 @@
-# Welcome to Docsify Page!
+# 快速开始
 
-This site was created using [**Docsify**](https://docsify.js.org), which is an open source documentation site generator, and imported in GitHub page. This site was created for [**Opensource.com**](https://opensource.com) demo.
+!> 注意：正在测试文档格式说明
 
-![Welcome to Opensource.com](./images/cover.jpg)
+> 测试第二个类型
+
+```bash
+cd ../home
+git clone test
+```
+
+```xml
+<?xml charset=utf-8
+
+
+?>
+```
+
