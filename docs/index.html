@@ -1,85 +1,43 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
-  <title>今日校园自动签到文档</title>
+  <title>QAP文档</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+
 </head>
+
 <body>
-  <div id="app">正在加载中...</div>
+  <nav>
+    <a href="#/">首页</a>
+    <a href="#/#目录">QAP文档</a>
+    <a href="#/side/">H5文档</a>
+  </nav>
+  <div id="app">加载中....</div>
+  <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script> -->
   <script>
     window.$docsify = {
-      el: "#app",
-      coverpage: true,
-      repo: 'thriving123/fuckTodayStudy',
-      loadSidebar: true,
-      auto2top: true,
-      // logo: 'https://avatars.githubusercontent.com/u/60968400?s=48&v=4',
-      name: '今日校园自动签到',
-      onlyCover: true,
-      search: {
-        paths: 'auto',
-        placeholder: '搜索',
-        noData: '找不到结果',
-        depth: 2, 
-      }, 
-      pagination: {
-        previousText: '上一篇',
-        nextText: '下一篇',
-        crossChapter: true,
-        crossChapterText: true
-      },
-      plugins: [
-        function (hook) {
-          var header = [
-            '<p>',
-              // '<a href="https://www.aliyun.com/sale-season/2020/procurement-new-members?userCode=thp9caen">',
-              '<img src="https://img-blog.csdnimg.cn/20210719222911357.png" alt="公众号" width="430px" height="136px" style="margin-top:-70px">',
-              '<img src="https://img-blog.csdnimg.cn/2021071922263371.png" alt="知识星球" width="327px" height="145px" style="margin-top:-70px">',
-              '<br/>',
-              '<span><a href="http://www.passjava.cn/" target="_blank">从零学架构认准： www.passjava.cn</a></span>',
-              '</p>'
-          ].join('');
-          var footer = [
-            '<hr/>',
-            '<footer style="text-align: center">',
-              '<p>',
-              // '<a href="https://www.aliyun.com/sale-season/2020/procurement-new-members?userCode=thp9caen">',
-              //'<img src="http://cdn.jayh.club/blog/20200910/8cQn6wSJtQND.png?imageslim" alt="公众号" width="557px" height="294px">',
-              '<img src="https://img-blog.csdnimg.cn/20210522084205664.png" alt="公众号" width="557px" height="294px">',
-              '<img src="https://oscimg.oschina.net/oscnet/up-a2f2ba3e2ec0d84f7b895c5476d98f202dc.png" alt="微信" width="557px" height="294px">',
-            '</p>',
-            '<span><a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备19010052号-2</a></span>',
-            '</footer>'
-          ].join('');
-          hook.afterEach(function (html) {
-            var isReadme = window.location.href.indexOf("README");
-            if (isReadme === -1) {
-              return header + html + footer;
-            } else {
-              return html + footer;
-            }
-          });
-        }
-      ],
+      coverpage: 'cover.md', // 封面
+      auto2top: true, //是否自动跳转到页面顶部。
+      subMaxLevel: 2, //自定义侧边栏后默认不会再生成目录
+      mergeNavbar: true, //小屏设备下合并导航栏到侧边栏
+      loadSidebar: 'summary.md', // 自定义侧边栏
+      // loadNavbar: true, //导航栏
+      name: 'Aiyongbao', // name
+      logo: '/image/aiyong.png', // logo
+      maxLevel: 6, //抓取文档中所有标题渲染成目录
+      repo: 'https://github.com/Duanruilong/qap_docs.git',
     }
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="//unpkg.com/docsify"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-php.js"></script>
+  <script src="//unpkg.com/docsify-copy-code"></script>
+
 </body>
+
 </html>
